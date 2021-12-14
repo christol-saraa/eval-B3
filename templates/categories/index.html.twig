@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+
+    <h1>  Catégories</h1>
+
+    <div class="categories">
+
+            {% for category in categorys %}
+            {#            <p>{{ category.createdAt |date("m/d/Y") }} </p>#}
+               <div class="card"   width="30%" height="30%">
+                  <img
+                        src="{{ category.file }} "
+                        class="card-img-top"
+                        alt="Waterfall"
+                        width="10%"
+                        height="10%"
+                  />
+                <div class="card-body"  width="30%" height="30%">
+                    <h5 class="card-title">{{ category.title }} </h5>
+                    <p class="card-text">
+                        {{ category.descreption }}
+                    </p>
+                    <a href="/lesson" class="btn btn-primary"> Plus</a>
+                </div>
+              </div>
+
+
+        {% endfor %}
+    </div>
+{% endblock %}

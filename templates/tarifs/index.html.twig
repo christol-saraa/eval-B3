@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Tarifs{% endblock %}
+
+{% block body %}
+    <h1>Tarifs</h1>
+    <div class="tarif">
+        <h2>Le rêglement est acquitté pour l'année entière :</h2>
+        <ul>
+            <li>soit en un chèque à l'ordre de l'association "Musique En Mouvement"</li>
+             <li>soit en trois chèques, ils seront datés du jour de leur émission et seront remis à l'encaissement : le jour de l'inscription, le 10 janvier et le 10 avril. Le montant de chaque chèque sera calculé avec l'aide du personnel de l'association.</li>
+        </ul>
+        <p>Une réduction «familles» de 10% est accordée sur le montant du cours collectif à partir du 2ème enfant inscrit, et de 15% à partir du 3ème enfant inscrit.</p>
+
+    </div>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Cours</th>
+            <th scope="col">Durée Séance</th>
+            <th scope="col">Tarif(Année)</th>
+            <th scope="col">Trif(Séance)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Initiation 1er degré</th>
+            <td>45min</td>
+            <td>390 £</td>
+            <td>13 £</td>
+        </tr>
+        <tr>
+            <th scope="row">Initiation 2eme degré</th>
+            <td>1h </td>
+            <td>540£</td>
+            <td>18 £</td>
+        </tr>
+        <tr>
+            <th scope="row">Initiation 3ème degré	</th>
+            <td>1h15min</td>
+            <td>620£</td>
+            <td>20,50£</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+{% endblock %}

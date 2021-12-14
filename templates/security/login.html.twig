@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}connexion{% endblock %}
+
+{% block body %}
+
+<form method="post">
+
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+
+
+    <input type="hidden" name="_csrf_token"  value="{{ csrf_token('authenticate') }}">
+
+    <div class="form-group">
+
+        <label class="form-label mt-4">Email</label>
+        <div class="form-floating mb-3">
+            <input type="email" name="email"class="form-control"  id="inputEmail" value="{{ last_username }}">
+            <label for="inputEmail">Email address</label>
+        </div>
+    <br>
+
+        <div class="form-floating">
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+
+     <br>
+
+        <button type="submit" class="btn btn-outline-dark" id="button-addon2">Connexion</button>
+        <button href="/compte" class="btn btn-outline-dark" id="inscription">Inscreption</button>
+
+    </div>
+</form>
+{% endblock %}
